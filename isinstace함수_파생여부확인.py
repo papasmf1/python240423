@@ -1,7 +1,9 @@
 class Person:
     pass
+
 class Bird:
     pass
+
 class Student(Person):
     pass
 
