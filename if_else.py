@@ -8,6 +8,6 @@ elif 70 <= score < 80:
 elif 60 <= score < 70:
     grade = "D"
 else:
-    grace = "F"
+    grade = "F"
     
 print("Grade is " + grade)
