@@ -34,6 +34,9 @@ print("{0:e}".format(4/3))
 print("{0:f}".format(4/3))
 print("{0:.2f}".format(4/3))
 
-
+#포맷스트링(f-format string)
+name = "전우치"
+age = 30 
+print(f"{name}, {age}")
 
 
