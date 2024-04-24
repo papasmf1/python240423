@@ -1,3 +1,6 @@
+#다른 모듈에 있는 클래스 
+import Chap05_BankAccount클래스 as ba 
+
 #Chap05_부모 클래스_자식 클래스.py
 #부모 클래스 정의(공통 코드 구현) 
 class Person:
@@ -34,3 +37,6 @@ s = Student("이순신", "010-111-1234", "빅데이터", "230123")
 p.printInfo()
 s.printInfo() 
 
+account1 = ba.BankAccount(200, "박문수", 20000)
+account1.deposit(5000)
+print(account1)
