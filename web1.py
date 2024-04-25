@@ -24,5 +24,6 @@ soup = BeautifulSoup(page, "html.parser")
 #태그 내부의 문자열 출력: .text, get_text()메서드 
 for tag in soup.find_all("p"):
     title = tag.text.strip()
+    title = title.replace("\n", "")
     print(title)
 
