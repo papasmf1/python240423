@@ -10,7 +10,20 @@ page = urllib.request.urlopen(url).read()
 #검색이 용이한 객체 
 soup = BeautifulSoup(page, "html.parser")
 
-posts = soup.find_all("div", attrs={"div":"card-desc"})
+#파일 쓰기 
+f = open("daangn.txt", "wt", encoding="utf-8")
+posts = soup.find_all("div", attrs={"class":"card-desc"})
+for post in posts:
+    titleElem = post.find("h2", attrs={"class":"card-title"})
+    priceElem = post.find("div", attrs={"class":"card-price"})
+    addrElem = post.find("div", attrs={"class":"card-region-name"})
+    title = titleElem.text.strip() 
+    price = priceElem.text.strip()
+    addr = addrElem.text.strip() 
+    print(f"{title}, {price}, {addr}")
+    f.write(f"{title}, {price}, {addr}\n")
+
+f.close() 
 
     # <div class="card-desc">
     #   <h2 class="card-title">아이폰 13 미니  256GB</h2>
