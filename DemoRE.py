@@ -20,6 +20,9 @@ result = re.search("\d{5}", "우리동네는 51333")
 print(result.group())
 
 print("---단어 검색---")
-result = re.search("apple", "this is apple")
+result = re.search( "apple", "this is Apple".lower() )
 print(result.group())
 
+print("---시작 패턴---")
+result = re.search( "^this", "this is Apple".lower() )
+print(result.group())
