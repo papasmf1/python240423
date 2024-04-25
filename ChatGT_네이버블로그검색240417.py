@@ -25,13 +25,12 @@ for page in range(1, 100):
     posts = soup.find_all('div', {'class':'fds-collection-root jbpl1VtDuaF1y0OLVw6I'})
     for post in posts:
         try:
-            #<a nocr="1" href="https://in.naver.com/" class="fwA5zB9fKvQZcIwEGZoQ fds-info-inner-text" target="_blank"><span class="m4k_AnOFgU2P631SabRj">혜진</span></a>
-            #<span class="<span class="m4k_AnOFgU2P631SabRj"><mark>아이폰15</mark> 핑크 자급제 쿠팡 구매후기</span>"><mark>아이폰15</mark> 핑크 자급제 쿠팡 구매후기</span>
+            #<a nocr="1" href="https://in96%B4" class="kbBffxjPwyVTeP10JD3y fds-info-inner-text" target="_blank"><span class="WlLgJQM1F90CPjOFn4AM">그남자 원동욱</span></a>
             #<span class="WlLgJQM1F90CPjOFn4AM">그남자 원동욱</span>
             blog_address_elem = post.find("a", 
-                attrs={"class":"WlLgJQM1F90CPjOFn4AM"}) 
+                attrs={"class":"kbBffxjPwyVTeP10JD3y fds-info-inner-text"}) 
             blog_address = blog_address_elem["href"]
-            blog_address_title_elem = post.find("span", attrs={"class":"m4k_AnOFgU2P631SabRj"})
+            blog_address_title_elem = post.find("span", attrs={"class":"WlLgJQM1F90CPjOFn4AM"})
             blog_address_title = blog_address_title_elem.text 
         except TypeError:
             blog_address = "" 
@@ -39,7 +38,6 @@ for page in range(1, 100):
         
         #<span class="WlLgJQM1F90CPjOFn4AM"><mark>맥북에어</mark>M3 13인치,<mark>맥북</mark>프로M3 14인치 가격 스펙 비교</span>
         #<span class="fds-info-sub-inner-text WlLgJQM1F90CPjOFn4AM">2주 전</span>
-        #<span class="fds-info-sub-inner-text WNE6DfqawXbjKLCLcd4a">4일 전</span>
         #<a nocr="1" href="https://blo" class="fwA5zB9fKvQZcIwEGZoQ fds-comps-right-image-text-title" target="_blank" data-cb-target="'SYS-0000000035493126.90000003_000000000000003403434C3B'" data-cb-trigger="true"><span class="m4k_AnOFgU2P631SabRj"><mark>아이폰15</mark> 색상 순위 고민 구입 꿀팁!</span></a>
         #<a nocr="1" href="https://in.nav4" class="kbBffxjPwyVTeP10JD3y fds-comps-right-image-text-content" target="_blank" data-cb-target="'SPC-0000000000009106.a0209rl4_nblog_post_223413866837'" data-cb-trigger="true"><span class="WlLgJQM1F90CPjOFn4AM">자, 여기까지 <mark>맥북 에어</mark> M3 13 인치 부터 <mark>맥북</mark>프로 M3 14 인치 스펙과 비교를 해보았습니다. <mark>에어</mark>는 옆그레이드, 프로는 업그레이드가 된 만큼 비교를 해보시기 바라며 저는 이만 마치도록 하겠습니다. <mark>맥북</mark> M3 시리즈 사전예약하기 #<mark>맥북에어</mark> #<mark>맥북에어</mark>M3 #<mark>맥북에어</mark>M3 #<mark>맥북에어</mark></span></a>
         
