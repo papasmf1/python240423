@@ -22,4 +22,12 @@ for name in names:
     print("안녕하세요 {0}님 벌써 여름입니다!".format(name))
     print("="*40)
 
+print("---문자열 가공---")
+data = "<<<  피자 햄버거 치킨  >>>"
+result = data.strip("<> ")
+print(data)
+print(result)
+result2 = result.replace("피자", "피자 빵")
+print(result2)
+
 
