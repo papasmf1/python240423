@@ -29,5 +29,11 @@ print(data)
 print(result)
 result2 = result.replace("피자", "피자 빵")
 print(result2)
+print("---리스트로 받기---")
+lst = result2.split() 
+print(lst)
+print("---하나의 문자열---")
+print(":)".join(lst))
+
 
 
